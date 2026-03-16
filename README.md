@@ -1,32 +1,58 @@
 # cavitation-bubble-classification
 
-Cavitation Bubble Classification using CNN
+# Cavitation Bubble Classification with CNNs
 
-This project explores whether cavitation bubble patterns
-in sparkling liquids contain enough visual information
-to classify the liquid type.
+This project explores whether cavitation bubble patterns contain enough visual information to distinguish between different sparkling wine types using computer vision.
 
-Dataset
-Frames were extracted from publicly available cavitation
-videos using FFmpeg. Images were labeled according
-to the corresponding liquid.
+## Project Idea
 
-Method
-A small convolutional neural network was trained
-for binary image classification.
+Cavitation bubbles formed in liquids often produce complex visual patterns.  
+This project investigates whether these patterns can be analyzed using deep learning models.
 
-Training setup:
-- train / validation split: 80 / 20
+## Dataset
+
+The dataset was constructed from publicly available cavitation videos.  
+Video frames were extracted using FFmpeg.
+
+Dataset statistics:
+
+- Total images: 1495
+- Classes: 2
+- Pink sparkling wine: 652
+- White sparkling wine: 843
+
+## Model
+
+A simple convolutional neural network was used:
+
+- 3 convolutional layers
+- ReLU activation
+- max pooling
+- fully connected classifier
+
+## Training
+
 - optimizer: Adam
-- loss: cross entropy
-- data augmentation
+- loss: cross-entropy
+- train/validation split: 80/20
+- epochs: 5
 
-Results
-The model achieved ~0.91 validation accuracy
-on the held-out validation set.
+## Results
 
-Future work
-Future experiments will include:
+The model achieved approximately **0.91 validation accuracy**.
+
+Example confusion matrix:
+
+![Confusion Matrix](confusion_matrix.png)
+
+## Motivation
+
+This project was inspired by my participation in the National Technological Olympiad in the Infochemistry track, where I worked on applying machine learning methods to analyze scientific visual data.
+
+## Future Work
+
+Future work could include:
+
 - larger datasets
-- temporal models using video sequences
+- temporal modeling using video sequences
 - deeper CNN architectures
