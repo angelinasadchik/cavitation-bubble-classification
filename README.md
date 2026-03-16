@@ -44,3 +44,15 @@ The model achieved approximately **0.91 validation accuracy**.
 Example confusion matrix:
 
 ![Confusion Matrix](confusion_matrix.png)
+
+## Experiment
+
+Two training configurations were compared:
+
+Model A
+5 epochs
+
+Model B
+10 epochs
+
+The second configuration improved validation accuracy slightly.
