@@ -44,15 +44,3 @@ The model achieved approximately **0.91 validation accuracy**.
 Example confusion matrix:
 
 ![Confusion Matrix](confusion_matrix.png)
-
-## Motivation
-
-This project was inspired by my participation in the National Technological Olympiad in the Infochemistry track, where I worked on applying machine learning methods to analyze scientific visual data.
-
-## Future Work
-
-Future work could include:
-
-- larger datasets
-- temporal modeling using video sequences
-- deeper CNN architectures
